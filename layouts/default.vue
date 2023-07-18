@@ -3,11 +3,8 @@
     <v-app-bar
       app
     >
-    <v-row>
-      <v-col cols="2">
-      <img src="@/assets/images/frontend.png" :width="174" aspect-ratio="16/9" class="ml-10 mt-10">
-    </v-col>
-    <v-col cols="10" class="text-end pr-15 mt-13">
+      <img src="@/assets/images/frontend.png" :width="200" aspect-ratio="16/9" class="ml-10 mt-2">
+      <v-spacer></v-spacer>
       <nuxt-link class="menuItems" to="/">Home</nuxt-link>
       <span class="ml-15"></span>
       <nuxt-link class="menuItems" to="/about">About</nuxt-link>
@@ -16,9 +13,7 @@
       <span class="ml-15"></span>
       <nuxt-link class="menuItems" to="/certificates">Certificates</nuxt-link>
       <span class="ml-15"></span>
-      <nuxt-link class="menuItems" to="/contact">Contact</nuxt-link>
-      </v-col>
-    </v-row>
+      <nuxt-link class="menuItems mr-10" to="/contact">Contact</nuxt-link>
     </v-app-bar>
     <v-main>
       <v-container>
