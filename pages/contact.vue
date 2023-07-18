@@ -1,3 +1,3 @@
 <template>
-    <p>asdsd</p>
+    <h1>Contact</h1>
 </template>
