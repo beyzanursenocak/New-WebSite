@@ -1,64 +1,62 @@
 <template>
   <v-card
-    class="mx-auto text-center mt-5" style="background-color: #d6ddd6;"
-   
+    class="mx-auto text-center mt-5"
+    :style="{ backgroundImage: 'url(' + require('@/assets/images/background.png') + ')', height: '80vh', position: 'relative' }"
   >
-  <v-card>
-  <div style="background-color: #d6ddd6; font-size: 60px; font-family: 'Dancing Script', cursive; max-height: 700px; margin-bottom: 15px;">Her Şey Bir Kodla Başlar</div>
-
-</v-card>
-  <v-container fluid>
-        <v-row dense>
-          <v-col
-            v-for="cardTitle in cardTitles" :key="cardTitle.id"
-            :title="cardTitle.title"
-            :icon="cardTitle.icon"
-            cols="12"
-            md="4"
-          >
-              <img
-                :src="require(`@/assets/images/cardTitle/${cardTitle.src}`)"
-                :alt="cardTitle.title"
-                class="img"
-                preload
-                loading="lazy"
-                sizes="sm:100vw md:50vw lg:400px"
-                layout="responsive"
-                @click="goPage(cardTitle.link)"
-              >
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-card>
-  </template>
+    <div class="centered-text">
+      <div style="font-size: 8vw; font-family: 'Dancing Script', cursive;">Her Şey Bir Kodla Başlar</div>
+    </div>
+    <div class="fixed-button-container">
+      <v-btn
+        color="#5C8D89"
+        rounded
+        @click="downloadCV"
+      >
+      Click Here For My CV
+      </v-btn>
+    </div>
+  </v-card>
+</template>
 
 <script>
-
-export default {
-  
-  data: () => ({
-    cardTitles: [
-      { title: 'About', src: 'About.png', link: '/about', flex: 4 },
-      { title: 'Food Blog', src: 'Certificates.png', link: '/portfolio' , flex: 4 },
-      { title: 'CarTrader', src: 'Portfolio.png', link: '/certificates' , flex: 4 },
-    ],
-  }),
+export default{
   methods: {
-    goPage: function (link) {
-      window.open(link);
-    }
-  }
+    downloadCV() {
+      const link = document.createElement("a");
+      link.href = "/CV/firdes-beyzanur-senocak-cv.pdf";
+      link.download = "firdes-beyzanur-senocak.pdf";
+      link.target = "_blank";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    },
+  },
 }
 </script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-.img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  cursor: pointer;
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.fixed-button-container {
+  position: absolute;
+  bottom: 70px; /* Adjust this value as needed */
+  right: 40px; /* Adjust this value as needed */
+}
+
+/* Add responsive styles to adjust button position on smaller screens */
+@media (max-width: 600px) {
+  .fixed-button-container {
+    bottom: 170px;
+    right: 20px;
+  }
 }
 </style>
-

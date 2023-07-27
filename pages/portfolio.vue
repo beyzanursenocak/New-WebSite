@@ -30,7 +30,7 @@
           {{ category }}
         </v-list-item-title>
       </v-list-item>
-    </v-list>filteredProjects
+    </v-list>
   </v-menu>
 
       </v-toolbar>
@@ -93,6 +93,8 @@ export default {
       { title: 'Website', src: 'Website.png', icon: 'mdi-ghost' , link: 'https://github.com/Firdesbeyzanur/Nuxtjs-WebSite' , text: 'My first mini website I made using Nuxt.' , flex: 4 , show: false, categories: ['Nuxt.js', 'All'] },
       { title: 'Website - 2', src: 'Website - 2.png', icon: 'mdi-responsive' , link: 'https://github.com/Firdesbeyzanur/ResponsiveWebsite' , text: 'Responsive site created with only HTML and CSS.' , flex: 4 , show: false, categories: ['HTML', 'All'] },
       { title: 'Website - 3', src: 'Website - 3.png', icon: 'mdi-laptop' , link: 'https://github.com/Firdesbeyzanur/ResponsiveWebsite-2' , text: 'Responsive site created with only HTML and CSS.' , flex: 4 , show: false, categories: ['HTML', 'All'] },
+      { title: 'Website - 4', src: 'ResponsiveWebsite-1.png', icon: 'mdi-laptop' , link: 'https://github.com/Firdesbeyzanur/ResponsiveWebsite' , text: 'Responsive website made using only HTML, CSS and Javascript.' , flex: 4 , show: false, categories: ['HTML','JavaScript', 'All'] },
+      { title: 'Website - 5', src: 'ResponsiveWebsite-2.png', icon: 'mdi-laptop' , link: 'https://github.com/Firdesbeyzanur/ResponsiveWebsite-2' , text: 'Responsive website made using only HTML and CSS.' , flex: 4 , show: false, categories: ['HTML', 'All'] },
       { title: 'Unity Game', src: 'Unity Game.png', icon: 'mdi-gamepad-variant' , link: 'https://github.com/Firdesbeyzanur/Survival-of-The-Fallen' , text: 'It is a thriller game that we developed with my team of 5 people, which I worked as a developer during the Oyun ve Uygulama Akademisi bootcamp process.' , flex: 4 , show: false, categories: ['Unity', 'All'] },
       { title: 'My Application', src: 'My Application.png', icon: 'mdi-airballoon' , link: 'https://github.com/Firdesbeyzanur/Vue3-Pictures' , text: 'An app to upload and delete photos.' , flex: 4 , show: false, categories: ['Vue.js', 'All'] },
       { title: 'Note Application', src: 'Note Application.png', icon: 'mdi-clipboard-check' , link: 'https://github.com/Firdesbeyzanur/FireBase-NotesApp' , text: 'Do you forget things to do during the day? Then this note app is for you.' , flex: 4 , show: false, categories: ['Vue.js', 'All'] },
@@ -104,7 +106,9 @@ export default {
       { title: 'Card App - 3', src: 'Card App - 3.png', icon: 'mdi-arrange-send-to-back' , link: 'https://github.com/Firdesbeyzanur/AddImageCard' , text: 'An application where you can upload up to 10 pieces with pictures and enter your information.' , flex: 4 , show: false, categories: ['Vue.js', 'All'] },
       { title: 'Card App - 4', src: 'Card App - 4.png', icon: 'mdi-arrange-bring-to-front' , link: 'https://github.com/Firdesbeyzanur/Card-App-2' , text: 'Click on the pen to open the edit section and edit it.' , flex: 4 , show: false, categories: ['Vue.js', 'All'] },
       { title: 'Card App - 5', src: 'Card App - 5.png', icon: 'mdi-multiplication-box' , link: 'https://github.com/Firdesbeyzanur/Card-App-1' , text: 'Edit the information on the card however you like.' , flex: 4 , show: false, categories: ['Vue.js', 'All'] },
-      { title: 'Titanic', src: 'Titanic.png', icon: 'mdi-qqchat' , link: 'https://github.com/Firdesbeyzanur/TitanicDataset' , text: 'In the Titanic dataset, data preprocessing was performed, ExtraTressClassifier and Feature Importance were extracted, SelectKBest was scored, correlation maps were created, non-normally distributed data were standardized and basic statistical information was extracted.' , flex: 4 , show: false, categories: ['Python', 'All'] },
+      { title: 'To-Do List', src: 'ToDoList.png', icon: 'mdi-format-list-group' , link: 'https://github.com/Firdesbeyzanur/Todo-List' , text: 'Made a To-Do list with JavaScript.' , flex: 4 , show: false, categories: ['JavaScript', 'All'] },
+      { title: 'Auto Gallery', src: 'AutoGallery.png', icon: 'mdi-car-estate' , link: 'https://github.com/Firdesbeyzanur/AutoGallery' , text: 'A car site with a car name, picture and price added with JavaScript.' , flex: 4 , show: false, categories: ['HTML', 'JavaScript', 'All'] },
+      { title: 'Titanic', src: 'Titanic.png', icon: 'mdi-chat' , link: 'https://github.com/Firdesbeyzanur/TitanicDataset' , text: 'In the Titanic dataset, data preprocessing was performed, ExtraTressClassifier and Feature Importance were extracted, SelectKBest was scored, correlation maps were created, non-normally distributed data were standardized and basic statistical information was extracted.' , flex: 4 , show: false, categories: ['Python', 'All'] },
       { title: 'Insurance', src: 'Insurance.png', icon: 'mdi-clipboard-plus' , link: 'https://github.com/Firdesbeyzanur/InsuranceDataset' , text: 'In the insurance dataset, prediction was performed with classifiers, Accuracy, Precision, Recall, F1-Score results were tabulated and confusion matrix was plotted.' , flex: 4 , show: false, categories: ['Python', 'All'] },
       { title: 'Stock', src: 'Stock.png', icon: 'mdi-cash' , link: 'https://github.com/Firdesbeyzanur/StockDataset' , text: 'Time Series, Regression and LSTM analysis were performed on the stock market data set and ARIMA model was applied.' , flex: 4 , show: false, categories: ['Python', 'All'] },
       { title: 'Forecast Process', src: 'Forecast Process.png', icon: 'mdi-account-convert' , link: 'https://github.com/Firdesbeyzanur/Tahminleme-Islemi' , text: 'Python code that predicts the age, race and gender of people after various operations.' , flex: 4 , show: false, categories: ['Python', 'All'] },
@@ -122,7 +126,7 @@ export default {
       { title: 'Xray Image', src: 'Xray Image.png', icon: 'mdi-hospital' , link: 'https://github.com/Firdesbeyzanur/XrayImageLesion' , text: 'The negative of the xray image was taken, the lesion was circled, spanned in the gray level range of 0.5-0.75, and the negative and gray level range were combined. ' , flex: 4 , show: false, categories: ['MATLAB', 'All']},
       { title: 'Histogram', src: 'Histogram.png', icon: 'mdi-chart-histogram' , link: 'https://github.com/Firdesbeyzanur/Histogram' , text: 'We got the input and output histogram images of the image. ' , flex: 4 , show: false, categories: ['MATLAB', 'All']},
     ],
-    categories: [ 'All', 'HTML', 'Vue.js', 'Nuxt.js','Unity', 'Python', 'MATLAB'],
+    categories: [ 'All', 'HTML', 'Vue.js', 'Nuxt.js','Unity', 'Python', 'MATLAB', 'JavaScript'],
     selectedCategory: null
   }),
   computed: {
