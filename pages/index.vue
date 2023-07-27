@@ -4,7 +4,7 @@
     :style="{ backgroundImage: 'url(' + require('@/assets/images/background.png') + ')', height: '80vh', position: 'relative' }"
   >
     <div class="centered-text">
-      <div style="font-size: 8vw; font-family: 'Dancing Script', cursive;">Her Şey Bir Kodla Başlar</div>
+      <div style="font-size: 8vw; font-family: 'Dancing Script', cursive;">All Things Starts With A Code</div>
     </div>
     <div class="fixed-button-container">
       <v-btn
