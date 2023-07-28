@@ -15,11 +15,54 @@
       Click Here For My CV
       </v-btn>
     </div>
+    <v-container fluid>
+      <v-row dense>
+        <v-col
+          v-for="social in socialMedias" :key="social.id"
+          cols="12"
+          md="4"
+        >
+          <a v-if="social.title === 'Mail'" :href="`mailto:${social.link}`">
+            <v-card class="mx-auto text-center mt-5" style="height: 300px; width: 300px;">
+              <nuxt-img
+                :src="require(`@/assets/images/socialMedia/${social.src}`)"
+                :alt="social.title"
+                preload
+                loading="lazy"
+                sizes="sm:100vw md:50vw lg:400px"
+                layout="responsive"
+              ></nuxt-img>
+            </v-card>
+          </a>
+          <a v-else :href="social.link" target="_blank" rel="noopener noreferrer">
+            <v-card class="mx-auto text-center mt-5" style="height: 300px; width: 300px;">
+              <nuxt-img
+                :src="require(`@/assets/images/socialMedia/${social.src}`)"
+                :alt="social.title"
+                preload
+                loading="lazy"
+                sizes="sm:100vw md:50vw lg:400px"
+                layout="responsive"
+              ></nuxt-img>
+            </v-card>
+          </a>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-card>
 </template>
 
+
 <script>
 export default{
+  data: () => ({
+    socialMedias: [
+      { title: 'GitHub', src: 'GitHub.png', link: 'https://github.com/Firdesbeyzanur' , flex: 4 },
+      { title: 'Linkedin', src: 'Linkedin.png', link: 'https://www.linkedin.com/in/firdesbeyzanursenocak/' , flex: 4 },
+      { title: 'Mail', src: 'Mail.png', link: 'beyzanursenocak96@gmail.com' , flex: 4 }
+    ],
+  }),
+
   methods: {
     downloadCV() {
       const link = document.createElement("a");
@@ -48,11 +91,10 @@ export default{
 
 .fixed-button-container {
   position: absolute;
-  bottom: 70px; /* Adjust this value as needed */
-  right: 40px; /* Adjust this value as needed */
+  bottom: 70px; 
+  right: 40px; 
 }
 
-/* Add responsive styles to adjust button position on smaller screens */
 @media (max-width: 600px) {
   .fixed-button-container {
     bottom: 170px;
