@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app>
       <nuxt-link to="/">
-        <img src="@/assets/images/frontend.png" :width="180" aspect-ratio="16/9" class="mt-2">
+        <img src="@/assets/images/frontend.webp" :width="180" aspect-ratio="16/9" class="mt-2">
       </nuxt-link>
       <v-spacer></v-spacer>
       

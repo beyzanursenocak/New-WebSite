@@ -1,7 +1,7 @@
 <template>
   <v-card
     class="mx-auto text-center mt-5"
-    :style="{ backgroundImage: 'url(' + require('@/assets/images/background.png') + ')', height: '80vh', position: 'relative' }"
+    :style="{ backgroundImage: 'url(' + require('@/assets/images/background.webp') + ')', height: '80vh', position: 'relative' }"
   >
     <div class="centered-text">
       <div style="font-size: 8vw; font-family: 'Dancing Script', cursive;">All Things Starts With A Code</div>
@@ -57,9 +57,9 @@
 export default{
   data: () => ({
     socialMedias: [
-      { title: 'GitHub', src: 'GitHub.png', link: 'https://github.com/Firdesbeyzanur' , flex: 4 },
-      { title: 'Linkedin', src: 'Linkedin.png', link: 'https://www.linkedin.com/in/firdesbeyzanursenocak/' , flex: 4 },
-      { title: 'Mail', src: 'Mail.png', link: 'beyzanursenocak96@gmail.com' , flex: 4 }
+      { title: 'GitHub', src: 'GitHub.webp', link: 'https://github.com/Firdesbeyzanur' , flex: 4 },
+      { title: 'Linkedin', src: 'Linkedin.webp', link: 'https://www.linkedin.com/in/firdesbeyzanursenocak/' , flex: 4 },
+      { title: 'Mail', src: 'Mail.webp', link: 'beyzanursenocak96@gmail.com' , flex: 4 }
     ],
   }),
 
